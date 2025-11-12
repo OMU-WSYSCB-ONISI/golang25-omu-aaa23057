@@ -1,0 +1,70 @@
+# Go関連
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+go.work.sum
+
+# ビルド成果物
+bin/
+dist/
+build/
+
+# IDE/エディタ設定（個人設定）
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ログファイル
+*.log
+logs/
+tmp/
+temp/
+
+# テストカバレッジ
+coverage.txt
+coverage.html
+*.coverprofile
+
+# 環境変数・機密情報（重要）
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+config/secrets.yaml
+secrets/
+
+# API Key・認証情報
+**/apikey.txt
+**/token.txt
+**/password.txt
+credentials.json
+
+# データベースファイル
+*.db
+*.sqlite
+*.sqlite3
+
+# キャッシュ
+.cache/
+__pycache__/
+*.pyc
+
+# OS生成ファイル
+Thumbs.db
+Desktop.ini
+
+# バックアップファイル
+*.bak
+*.backup
+*.orig

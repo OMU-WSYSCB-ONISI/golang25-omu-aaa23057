@@ -1,0 +1,62 @@
+# Git関連
+.git
+.gitignore
+.gitattributes
+.github
+
+# ビルド成果物
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+bin/
+dist/
+build/
+
+# Go関連
+go.work
+go.work.sum
+vendor/
+
+# IDE/エディタ設定
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ログとキャッシュ
+*.log
+tmp/
+temp/
+cache/
+
+# ドキュメント（ビルド時不要）
+README.md
+LICENSE
+docs/
+*.md
+
+# CI/CD設定
+.github/workflows/
+.gitlab-ci.yml
+azure-pipelines.yml
+
+# テストカバレッジ
+coverage.txt
+coverage.html
+*.coverprofile
+
+# ローカル環境設定
+.env
+.env.local
+*.local
+
+# Node.js関連（フロントエンドがある場合）
+node_modules/
+npm-debug.log
+yarn-error.log

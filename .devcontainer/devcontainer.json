@@ -1,0 +1,450 @@
+{
+  "name": "Golang Development Environment (Debian)",
+  
+  "image": "ghcr.io/onisi/omu-sss-websys:2025autumn",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.Go",
+        "oderwat.indent-rainbow",
+        "mosapride.zenkaku",
+        "shardulm94.trailing-spaces",
+        "usernamehw.errorlens",
+        "formulahendry.code-runner",
+        "aaron-bond.better-comments",
+        "wayou.vscode-todo-highlight",
+        "mhutchie.git-graph",
+        "PKief.material-icon-theme",
+        "ms-ceintl.vscode-language-pack-ja",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-preview-github-styling"
+      ],
+      
+      "settings": {
+        // ===== AI補完機能の厳格な無効化（教育目的） =====
+        // GitHub Copilot
+        "github.copilot.enable": {
+          "*": false,
+          "plaintext": false,
+          "markdown": false,
+          "scminput": false,
+          "go": false
+        },
+        "github.copilot.editor.enableAutoCompletions": false,
+        "github.copilot.editor.enableCodeActions": false,
+        "github.copilot.chat.enabled": false,
+        "github.copilot.chat.welcomeMessage": "off",
+        
+        // VS Code組み込みのAI機能
+        "chat.enabled": false,
+        "inlineChat.enabled": false,
+        "editor.inlineSuggest.enabled": false,
+        
+        // IntelliCode
+        "vsintellicode.modify.editor.suggestSelection": "disabled",
+        "vsintellicode.features.python.deepLearning": "disabled",
+        
+        // Tabnine
+        "tabnine.experimentalAutoImports": false,
+        "tabnine.disableLineRegex": [".*"],
+        
+        // Codeium
+        "codeium.enableCodeLens": false,
+        "codeium.enableConfig": {
+          "*": false
+        },
+        
+        // AWS CodeWhisperer
+        "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
+        
+        // その他のAI補完機能
+        "editor.suggestSelection": "first",
+        "editor.quickSuggestions": {
+          "other": true,
+          "comments": false,
+          "strings": false
+        },
+        
+        // ===== Go設定 =====
+        "go.useLanguageServer": true,
+        "go.lintTool": "golangci-lint",
+        "go.lintOnSave": "workspace",
+        "go.formatTool": "goimports",
+        "go.buildOnSave": "off",
+        "go.vetOnSave": "off",
+        "go.delveConfig": {
+          "dlvLoadConfig": {
+            "followPointers": true,
+            "maxVariableRecurse": 1,
+            "maxStringLen": 64,
+            "maxArrayValues": 64,
+            "maxStructFields": -1
+          },
+          "showGlobalVariables": false
+        },
+        "go.toolsManagement.autoUpdate": false,
+        
+        // ===== Go固有の設定 =====
+        "[go]": {
+          "editor.defaultFormatter": "golang.go",
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+          }
+        },
+        
+        // ===== エディター基本設定 =====
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false,
+        
+        // ===== アクセシビリティ設定 =====
+        // フォントサイズ・可読性
+        "editor.fontSize": 14,
+        "editor.lineHeight": 1.6,
+        "editor.fontFamily": "'Consolas', 'Courier New', monospace",
+        "editor.fontLigatures": false,
+        "editor.letterSpacing": 0,
+        
+        // カーソル・選択の視認性向上
+        "editor.cursorBlinking": "smooth",
+        "editor.cursorWidth": 3,
+        "editor.cursorStyle": "block",
+        "editor.renderWhitespace": "boundary",
+        "editor.renderControlCharacters": true,
+        
+        // コントラスト・色設定
+        "workbench.colorTheme": "Default Dark Modern",
+        "editor.tokenColorCustomizations": {
+          "textMateRules": [
+            {
+              "scope": "comment",
+              "settings": {
+                "foreground": "#6A9955",
+                "fontStyle": "italic"
+              }
+            }
+          ]
+        },
+        
+        // アクセシビリティ支援機能（音声通知は無効）
+        "editor.accessibilitySupport": "on",
+        "accessibility.signals.lineHasError": {
+          "sound": "off",
+          "announcement": "off"
+        },
+        "accessibility.signals.lineHasWarning": {
+          "sound": "off",
+          "announcement": "off"
+        },
+        "accessibility.signals.lineHasBreakpoint": {
+          "sound": "off"
+        },
+        "accessibility.signals.taskCompleted": {
+          "sound": "off"
+        },
+        "accessibility.signals.taskFailed": {
+          "sound": "off"
+        },
+        "accessibility.signals.terminalBell": {
+          "sound": "off"
+        },
+        
+        "editor.guides.bracketPairs": "active",
+        "editor.bracketPairColorization.enabled": true,
+        
+        // 読みやすさの向上
+        "editor.wordWrap": "on",
+        "editor.wrappingIndent": "indent",
+        "editor.wordWrapColumn": 120,
+        "editor.rulers": [80, 120],
+        "editor.smoothScrolling": true,
+        "editor.mouseWheelZoom": true,
+        
+        // ターミナルのアクセシビリティ
+        "terminal.integrated.fontSize": 14,
+        "terminal.integrated.lineHeight": 1.4,
+        "terminal.integrated.fontFamily": "'Consolas', 'Courier New', monospace",
+        "terminal.integrated.cursorBlinking": true,
+        "terminal.integrated.cursorStyle": "block",
+        "terminal.integrated.cursorWidth": 3,
+        
+        // ===== 初心者向けUI簡素化設定 =====
+        // 不要なUI要素を非表示
+        "workbench.activityBar.visible": true,
+        "workbench.statusBar.visible": true,
+        "workbench.editor.showTabs": "multiple",
+        "workbench.editor.enablePreview": false,
+        "workbench.editor.enablePreviewFromQuickOpen": false,
+        
+        // ブレッドクラム（パス表示）をシンプルに
+        "breadcrumbs.enabled": true,
+        "breadcrumbs.symbolPath": "off",
+        
+        // ミニマップを非表示（コードに集中）
+        "editor.minimap.enabled": false,
+        
+        // 不要な推奨事項・通知を抑制
+        "extensions.ignoreRecommendations": true,
+        "extensions.autoCheckUpdates": false,
+        "extensions.autoUpdate": false,
+        "extensions.showRecommendationsOnlyOnDemand": true,
+        "update.mode": "none",
+        "update.showReleaseNotes": false,
+        "telemetry.telemetryLevel": "off",
+        
+        // Codespaces/リモート開発の通知を完全抑制
+        "github.codespaces.devcontainerChangedNotificationStyle": "none",
+        "github.codespaces.showPerformanceExplorer": false,
+        "remote.tunnels.access.showInStatusBar": false,
+        "remote.autoForwardPorts": false,
+        
+        // Git decorations（ファイル名横のM/U表示）を控えめに
+        "scm.diffDecorations": "gutter",
+        "git.decorations.enabled": false,
+        "scm.showChangesSummary": false,
+        "git.showPushSuccessNotification": false,
+        
+        // 複雑なエディター機能を制限
+        "editor.codeLens": false,
+        "editor.lightbulb.enabled": "off",
+        "editor.hover.delay": 500,
+        "editor.parameterHints.enabled": true,
+        
+        // 問題パネルの自動表示を制御
+        "problems.autoReveal": true,
+        "problems.showCurrentInStatus": true,
+        
+        // ターミナルの推奨を非表示
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.showExitAlert": false,
+        "terminal.integrated.confirmOnExit": "never",
+        
+        // エディターの余計な装飾を削減
+        "editor.renderLineHighlight": "line",
+        "editor.occurrencesHighlight": "off",
+        "editor.selectionHighlight": true,
+        
+        // 折りたたみを制限（初心者が見失わないように）
+        "editor.folding": true,
+        "editor.foldingStrategy": "indentation",
+        "editor.showFoldingControls": "mouseover",
+        
+        // Peek定義を無効化（初心者向けにシンプルに）
+        "editor.peekWidgetDefaultFocus": "editor",
+        
+        // ファイルエクスプローラーをシンプルに
+        "explorer.compactFolders": false,
+        "explorer.confirmDelete": true,
+        "explorer.confirmDragAndDrop": true,
+        
+        // ===== パフォーマンス最適化（多人数利用時） =====
+        "files.watcherExclude": {
+          "**/.git/objects/**": true,
+          "**/.git/subtree-cache/**": true,
+          "**/node_modules/*/**": true,
+          "**/.hg/store/**": true,
+          "**/vendor/**": true
+        },
+        "search.exclude": {
+          "**/node_modules": true,
+          "**/bower_components": true,
+          "**/*.code-search": true,
+          "**/vendor": true
+        },
+        "files.exclude": {
+          "**/.*": true,
+          "**/.git": true,
+          "**/.gitignore": true,
+          "**/images/**": true,
+          "**/LICENSE": true,
+          "**/TEACHER_REVIEW_GUIDE.md": true,
+          "**/IMAGES.md": true,
+          "**/create-weekly-structure.sh": true,
+          "**/go.mod": true,
+          "**/.DS_Store": true,
+          "**/Thumbs.db": true
+        },
+        
+        // Git操作の最適化
+        "git.autofetch": false,
+        "git.autorefresh": true,
+        "git.enableSmartCommit": false,
+        "git.confirmSync": true,
+        
+        // ===== ファイル設定 =====
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "files.encoding": "utf8",
+        
+        // ===== ワークベンチ設定 =====
+        "workbench.secondarySideBar.defaultVisibility": "hidden",
+        "workbench.startupEditor": "welcomePage",
+        "workbench.enableExperiments": false,
+        "workbench.settings.enableNaturalLanguageSearch": false,
+        "workbench.tips.enabled": false,
+        "workbench.welcomePage.walkthroughs.openOnInstall": false,
+        
+        // 検索設定
+        "search.searchOnType": false,
+        
+        // ===== 配色設定 =====
+        "workbench.colorCustomizations": {
+          "editorIndentGuide.background": "#3a3a3a",
+          "editorIndentGuide.activeBackground": "#ffffff"
+        },
+        
+        // レインボーインデント
+        "indentRainbow.colors": [
+          "rgba(178, 34, 34, 0.3)",
+          "rgba(255, 69, 0, 0.3)",
+          "rgba(255, 215, 0, 0.3)",
+          "rgba(34, 139, 34, 0.3)",
+          "rgba(0, 0, 128, 0.3)",
+          "rgba(139, 0, 139, 0.3)"
+        ],
+        
+        // ===== 初心者向け拡張機能の設定 =====
+        // Error Lens: エラーを行内に表示
+        "errorLens.enabled": true,
+        "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+        
+        // Trailing Spaces: 末尾スペースをハイライト
+        "trailing-spaces.trimOnSave": true,
+        "trailing-spaces.highlightCurrentLine": false,
+        
+        // Better Comments: コメントの色分け
+        "better-comments.tags": [
+          {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+          },
+          {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+          },
+          {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+          },
+          {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+          },
+          {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+          }
+        ],
+        
+        // TODO Highlight
+        "todohighlight.isEnable": true,
+        "todohighlight.keywords": [
+          {
+            "text": "TODO:",
+            "color": "#000",
+            "backgroundColor": "#FFD700",
+            "overviewRulerColor": "#FFD700"
+          },
+          {
+            "text": "FIXME:",
+            "color": "#fff",
+            "backgroundColor": "#FF4500",
+            "overviewRulerColor": "#FF4500"
+          },
+          {
+            "text": "NOTE:",
+            "color": "#000",
+            "backgroundColor": "#87CEEB",
+            "overviewRulerColor": "#87CEEB"
+          }
+        ],
+        
+        // Material Icon Theme
+        "workbench.iconTheme": "material-icon-theme",
+        
+        // Markdown設定
+        "markdown.preview.fontSize": 14,
+        "markdown.preview.lineHeight": 1.6
+      }
+    }
+  },
+  
+  // ライフサイクルコマンド
+  "onCreateCommand": "go version && go env",
+  "updateContentCommand": "go mod download || echo 'No go.mod found'",
+  "postCreateCommand": "echo 'Codespace created!'",
+  "postStartCommand": "echo 'Codespace ready! Go version:' && go version",
+  "postAttachCommand": "bash -c 'EXTS=(\"GitHub.copilot\" \"GitHub.copilot-chat\" \"GitHub.copilot-labs\" \"GitHub.copilot-nightly\" \"VisualStudioExptTeam.vscodeintellicode\" \"VisualStudioExptTeam.intellicode-api-usage-examples\" \"TabNine.tabnine-vscode\" \"Codeium.codeium\" \"AmazonWebServices.aws-toolkit-vscode\"); for ext in \"${EXTS[@]}\"; do code --uninstall-extension \"$ext\" >/dev/null 2>&1 || true; done; echo \"Codespace ready!\"'",
+  
+  // ユーザー設定  
+  "remoteUser": "vscode",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  
+  // ポートフォワーディング
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Application",
+      "onAutoForward": "notify",
+      "visibility": "public",
+      "protocol": "http"
+    }
+  },
+  
+  // マウント設定
+  "mounts": [
+    "source=go-mod-cache,target=/go/pkg/mod,type=volume",
+    "source=go-build-cache,target=/home/vscode/.cache/go-build,type=volume"
+  ],
+  
+  // 環境変数
+  "containerEnv": {
+    "TZ": "Asia/Tokyo",
+    "LANG": "ja_JP.UTF-8",
+    "LC_ALL": "ja_JP.UTF-8",
+    "GO111MODULE": "on",
+    "GOPROXY": "https://proxy.golang.org,direct",
+    "CODESPACE_EDUCATION_MODE": "true"
+  },
+  
+  // 起動最適化
+  "waitFor": "onCreateCommand",
+  
+  // リソース制限
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "32gb"
+  }
+}
+
+
