@@ -1,0 +1,96 @@
+<html>
+  <head> </head>
+  <body>
+    <!--  -------------------------------------- -->
+    <h3>アンケート</h3>
+    <form method="GET" action="enq">
+      <div>名前：<input type="text" name="name" /></div>
+      <div>出身地：<input type="text" name="birthplace" /></div>
+      <div>年齢：<input type="number" name="age" /></div>
+      <div>男性：<input type="radio" name="gend" value="男性" /></div>
+      <div>女性：<input type="radio" name="gend" value="女性" /></div>
+      <div>無回答：<input type="radio" name="gend" value="無回答" /></div>
+
+      <input type="submit" value="送信" />
+      <input type="reset" value="取消" />
+    </form>
+
+    <!--  -------------------------------------- -->
+    <h3>合計金額</h3>
+    <form method="GET" action="cal00">
+      <div>
+        <label>単価(円)：<input name="price" type="number" step="any" /></label>
+      </div>
+      <div>
+        <label>数(個)：<input name="num" type="number" step="any" /></label>
+      </div>
+      <input type="submit" value="送信" />
+      <input type="reset" value="取消" />
+    </form>
+    <!--  -------------------------------------- -->
+    <h3>計算(加減)</h3>
+    <form method="GET" action="cal01">
+      <input type="number" name="x" /> 演算
+      <input type="number" name="y" /> =
+
+      <!-- ラジオボタン選択肢 -->
+      <input id="plus" type="radio" name="cal0" value="+" checked />
+      <label for="plus">足す</label>
+      <input id="minus" type="radio" name="cal0" value="-" />
+      <label for="minus">引く</label>
+      <input type="submit" value="送信" />
+      <input type="reset" value="取消" />
+    </form>
+    <!--  -------------------------------------- -->
+    <h3>合計</h3>
+    <form method="GET" action="sum">
+      <div>データ：<input type="text" name="dd" /></div>
+      <input type="submit" value="送信" />
+      <input type="reset" value="取消" />
+    </form>
+    <!--  -------------------------------------- -->
+    <h3>BMI</h3>
+    <form method="GET" action="bmi">
+      <div>身長(cm)：<input type="number" name="height" /></div>
+      <div>体重(kg)：<input type="number" name="weight" step="any" /></div>
+      <input type="submit" value="送信" />
+      <input type="reset" value="取消" />
+    </form>
+
+    <!--  -------------------------------------- -->
+    <h3>計算（加減乗除）</h3>
+    <form method="GET" action="cal02">
+      <input type="number" name="x" /> 演算
+      <input type="number" name="y" /> =
+
+      <input id="plus2" type="radio" name="cal0" value="+" checked />
+      <label for="plus2">足す</label>
+
+      <input id="minus2" type="radio" name="cal0" value="-" />
+      <label for="minus2">引く</label>
+
+      <input id="mul2" type="radio" name="cal0" value="*" />
+      <label for="mul2">掛ける</label>
+
+      <input id="div2" type="radio" name="cal0" value="/" />
+      <label for="div2">割る</label>
+
+      <input type="submit" value="送信" />
+      <input type="reset" value="取消" />
+    </form>
+
+    <!--  -------------------------------------- -->
+    <h3>平均と分布</h3>
+    <form method="GET" action="avg">
+      <div>
+        得点カンマ区切り：
+        <input
+          type="text"
+          name="scores"
+        />
+      </div>
+      <input type="submit" value="送信" />
+      <input type="reset" value="取消" />
+    </form>
+  </body>
+</html>
