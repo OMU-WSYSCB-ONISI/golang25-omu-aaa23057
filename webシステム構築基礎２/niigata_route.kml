@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>万代天明地区</name>
+	<open>1</open>
+	<StyleMap id="msn_red-circle">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_red-circle</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_red-circle</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_red-circle">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff00ffff</color>
+		</LabelStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_red-circle">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff00ffff</color>
+		</LabelStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Placemark>
+		<name>万代長嶺小学校</name>
+		<description><![CDATA[<h1>万代長嶺小学校</h1>
+<h2>万代長嶺小学校は，地区の指定避難所で，地区避難のよりどころとなる施設です．非常時の備蓄品などが備えられています．津波避難ビルとしても指定されていて，津波の際には，校舎の３階以上に避難する必要があります．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230327_043021.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230327_043049.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.0641346929636,37.9170812529394,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>非常用水源</name>
+		<description><![CDATA[<h1>非常用水源</h1>
+<h2>万代長嶺小学校の向かいの集合住宅の駐車場地下には，地震災害時に必要な飲料水と防火用水の貯留施設があります．飲料水用に100m＾3を蓄えられるようになっています．近くには，水をくみ上げられる手押しポンプも設置されています．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230327_043221.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230327_043247.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.0637128327178,37.91755193354572,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>電柱の地盤高表示</name>
+		<description><![CDATA[<h1>電柱の地盤高表示</h1>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230327_043438.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.0629624253591,37.91840470885879,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>三社神社</name>
+		<description><![CDATA[<h1>三社神社</h1>
+<h2>
+神社境内には，神社やこの地域の由来が記された碑や説明版があり，このあたりが流作場(りゅうさくば)新田という信
+濃川河口の中州を新田開発された地域であること，幾度の川に氾濫に見舞われた地域であることを知ることができます．地域の生い立ちを知る場として大切な地点です．
+</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">三社神社</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230327_223957.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230327_224112.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_014637.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_015219.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_015233.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin0</styleUrl>
+		<Point>
+			<coordinates>139.0609861345136,37.92088643035753,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>宮浦中学校</name>
+		<description><![CDATA[<h1>宮浦中学校</h1>
+<h2>区の指定避難所，津波避難ビルとなっています．学校の敷地境界が生垣などで，比較的開放的な空間となっています．この場所の地盤標高，が示されているだけでなく，津波での避難可能な時間は「24時間」となっていて，あくまでも，一時的な避難場所であることが示されています．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">細い生活道路</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_021106.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin0</styleUrl>
+		<Point>
+			<coordinates>139.0609491675016,37.92056139815414,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>万代町の生活道路</name>
+		<description><![CDATA[<h1>
+万代町の生活道路
+</h1>
+<h2>万代町には，古い町並みが残り，木造家屋の密集，細く屈曲した生活道路が確認できます．災害時の避難路の確保が難しく，火災発生時の延焼が起こりやすく，特に地震直後の火の始末は地区住民で徹底しておこなう必要があります．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">細い生活道路</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_022130.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin0</styleUrl>
+		<Point>
+			<coordinates>139.061586819955,37.91880560365447,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>万代市民会館</name>
+		<description><![CDATA[<h1>万代市民会館</h1>
+<h2>万代市民会館も地震，洪水．津波の際の避難場所となります．この地点は海面よりも低い土地であることがわかります．水害時にはて建物の2階以上に避難する必要があります．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">万代市民会館</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_023356.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_023526.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin0</styleUrl>
+		<Point>
+			<coordinates>139.0620015001968,37.91644234456493,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>コンビニエンス・ストア</name>
+		<description><![CDATA[<h1>コンビニエンス・ストア</h1>
+<h2>地区にあるコンビニエンス・ストアの出入り口にはサービスにかかわるいろいろな表示があります．この店には黄色に青のハートで示される，災害時帰宅支援ステーションの表示があります．徒歩帰宅者の支援のために「水道水」，「トイレ」，「道路情報などの情報」の提供を行ってくれます．コンビニエンスストアだけでなく，レストランなども行政と災害協力協定を結んでいます．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">コンビニサイン</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_023803.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin0</styleUrl>
+		<Point>
+			<coordinates>139.0623193525706,37.91560047510423,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>立体駐車場</name>
+		<description><![CDATA[<h1>立体駐車場</h1>
+<h2>この地区は新潟駅に近いこともあり，立体駐車場がいくつか見受けられます．津波の際に，緊急の高所避難の際には．このような立体駐車場を高所避難場所としておくこともできます．地震の揺れで，駐車している車の乱れなどが危惧されます．避難場所としての位置づけはされていないので，災害備蓄品などはありません．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">立体駐車場</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_024216.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.0628840332281,37.91488883354912,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>地域の由来の解説板</name>
+		<description><![CDATA[<h1>地域の由来の解説板</h1>
+<h2>この地点には，地区の由来を説明した「新潟市街角歴史案内」があります．流作場新田の古地図などが示されています．新潟市で最も古くから開けた場所としての沼垂（渟足）の由来も示されています．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">地域の由来サイン
+</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_024758.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.0636739791242,37.91426200264947,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>東公園</name>
+		<description><![CDATA[<h1>東公園</h1>
+<h2>東公園は地区の一時避難場所となる公園です．園内には自治会の各防災倉庫がおかれているほか，公営のプールもあり，非常用の雑用水の確保もできます．公衆電話も設置されています．この公園の地下には，雨水の一時貯留排水施設があり，集中豪雨の際に，地区の内水氾濫を緩和させる仕組みが備えられています．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">東公園</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_025442.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_025509.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_025734.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_025950.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_030052.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin0</styleUrl>
+		<Point>
+			<coordinates>139.0664522108061,37.91546120074717,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>古信濃川サイン</name>
+		<description><![CDATA[<h1>古信濃川サイン</h1>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">古信濃川サイン</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_030329.jpg" width="300"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_030716.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.0671906793888,37.91636549956593,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>中央図書館</name>
+		<description><![CDATA[<h1>中央図書館</h1>
+<h2>中央図書館の前の道路は古い信濃川の流路でした．これを説明した看板と碑が，図書館前の道路の向い側にあります．中央図書館の建物は津波避難ビルに指定されています．津波の際にはビルの3階以上に避難する必要があります．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_030822.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin0</styleUrl>
+		<Point>
+			<coordinates>139.0671450135441,37.91680632560672,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>バス通アーケード</name>
+		<description><![CDATA[<h1>バス通りアーケード</h1>
+<h2>バス通りの両側の歩道には，アーケードが設置されています．冬季の積雪の際には，役立つ施設です．しかし，アーケードの屋根には，釣り看板が所々設置されていて，地震時の強い揺れによって，落下する危険性をはらんでいます．</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">バス通アーケード</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_032715.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.063079913982,37.91826245520795,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>天明公園</name>
+		<description><![CDATA[<h1>天明公園</h1>
+<h2>天明町内の小さな地区公園</h2>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;">天明公園</td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_033030.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.0625798872513,37.91911033812406,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>天明中央公園</name>
+		<description><![CDATA[<h1>天明中央公園</h1>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5" cellspacing="2"><tbody><tr><td style="text-align: left; vertical-align: top; width: 50%;">description</td><td style="text-align: left; vertical-align: top; width: 50%;"></td></tr><tr><td colspan="2" style="text-align: left; vertical-align: top; width: 100%;"><img src="files/IMG_20230328_033631.jpg" width="300"></td></tr></tbody></table>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Point>
+			<coordinates>139.0628907604954,37.92026896145239,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>防災まち歩きルート</name>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				139.0608445187917,37.92089531401492,0 139.0608158472011,37.92081882682736,0 139.060980734305,37.92058323092699,0 139.0612844764344,37.91975355388038,0 139.0611816450616,37.91950840522109,0 139.0614607586245,37.9194370017571,0 139.0613374536032,37.91912573529671,0 139.0616146006732,37.91899919144257,0 139.0614471345967,37.91864437684436,0 139.0616466433294,37.91858420017581,0 139.0614564104657,37.91815224996513,0 139.0618691665324,37.91803463208947,0 139.0617602357203,37.91787575591819,0 139.0612028330387,37.91763962461814,0 139.0612738490267,37.91752580279726,0 139.0611923068981,37.91749260734252,0 139.0617601636161,37.91669908163519,0 139.0619958092855,37.91629376296605,0 139.0622720291331,37.91582806919688,0 139.0624104848183,37.91561813452766,0 139.0628544713068,37.91488645020643,0 139.0629740381816,37.91466132324931,0 139.0632582974485,37.91411908721642,0 139.0642745206721,37.91445263177923,0 139.0657291220767,37.91493636882643,0 139.0665649375872,37.9152570656011,0 139.0661360291629,37.9160155951507,0 139.0671948602213,37.91642909754052,0 139.0672996322391,37.91648850469866,0 139.0670948405066,37.91691771907958,0 139.06691168578,37.91731501196584,0 139.0651320586765,37.91665525383512,0 139.0650241326132,37.9168144844094,0 139.0643507526775,37.91656872795039,0 139.0640253334505,37.9171039484442,0 139.0638195925273,37.91747399092249,0 139.0636878610484,37.91769796598983,0 139.0635554882022,37.91788555458556,0 139.0633945412974,37.9180794367382,0 139.0631454296298,37.9182902084707,0 139.0629581460687,37.91843728976711,0 139.0627396667617,37.91858336227696,0 139.0626323212604,37.91871448759845,0 139.0624628908772,37.91914241082344,0 139.0628147413304,37.91922588697082,0 139.0631370455047,37.9193716610537,0 139.0633594394588,37.91948575317937,0 139.0632007063965,37.91984633668189,0 139.0630714069395,37.91982332216704,0 139.0629904212706,37.92008541409736,0 139.0628773455054,37.92042081671207,0 139.0625495663051,37.92038091774283,0 139.0623117891467,37.92036010229968,0 139.0620008058561,37.92031446264266,0 139.0620085742643,37.92031900723447,0 139.0618143241701,37.92074094337585,0 139.0610308949048,37.92060639778407,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark>
+		<name>火災ハザード</name>
+		<LookAt>
+			<longitude>139.0623708513118</longitude>
+			<latitude>37.91860446972377</latitude>
+			<altitude>0</altitude>
+			<heading>-83.74184660541987</heading>
+			<tilt>30.29361850562059</tilt>
+			<range>410.8796015942773</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#msn_red-circle</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>139.0616159658975,37.9189953306449,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>液状化ハザード</name>
+		<LookAt>
+			<longitude>139.0665917258345</longitude>
+			<latitude>37.91640539614993</latitude>
+			<altitude>0</altitude>
+			<heading>-83.73925250569009</heading>
+			<tilt>30.29336133650018</tilt>
+			<range>354.0773974776783</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#msn_red-circle</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>139.0671890287998,37.91642855477739,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>道路閉塞ハザード</name>
+		<LookAt>
+			<longitude>139.0629604263644</longitude>
+			<latitude>37.91934417842845</latitude>
+			<altitude>0</altitude>
+			<heading>-83.74126286454161</heading>
+			<tilt>26.59258183227988</tilt>
+			<range>390.0958524174727</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#msn_red-circle</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>139.0631636379113,37.9198408902756,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>落下物ハザード</name>
+		<LookAt>
+			<longitude>139.0631976466237</longitude>
+			<latitude>37.91800382602223</latitude>
+			<altitude>0</altitude>
+			<heading>-83.74111705515141</heading>
+			<tilt>26.59258186144101</tilt>
+			<range>390.102931197002</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#msn_red-circle</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>139.0631360587298,37.91829041482507,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>浸水ハザード</name>
+		<LookAt>
+			<longitude>139.0626950636425</longitude>
+			<latitude>37.91643841889454</latitude>
+			<altitude>0</altitude>
+			<heading>-83.74150883172149</heading>
+			<tilt>30.00393016543911</tilt>
+			<range>875.0113210218641</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#msn_red-circle</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>139.0617895019654,37.91671821650432,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
