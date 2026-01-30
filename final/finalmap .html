@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>1.地図タイルを背景として表示する</title>
+        <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""
+        ></script>
+
+
+        <!-- LeafletのCSS読み込み -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""
+        />
+
+        <!-- Leaflet.markerclusterを読み込み -->
+        <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css"
+        />
+
+
+    </head>
+    <body>
+        <!-- 地図を表示するdiv要素を宣言 -->
+        <div id="map" style="height: 80vh"></div>
+        <script>
+            // 地図インスタンスを初期化
+            const map = L.map('map', {
+                center: [34.544648, 135.506436], // 初期表示の地図中心の[緯度, 経度]
+                zoom: 18, // 初期ズームレベル
+            });
+            // 背景レイヤーインスタンスを初期化
+            const backgroundLayer = L.tileLayer(
+                'https://tile.openstreetmap.org/{z}/{x}/{y}.png', // OSMのURLテンプレート
+                {
+                    maxZoom: 19,
+                    attribution:
+                        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                },
+            );
+            // 地図インスタンスへレイヤーを追加
+            map.addLayer(backgroundLayer);
+ 
+            // 背景レイヤーインスタンスを初期化
+            const chiriinLayer = L.tileLayer(
+                'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png',  // 地理院地図のURLテンプレート
+                {
+                maxZoom: 18
+                },
+            );
+            // 地理院地図インスタンスへレイヤーを追加
+            map.addLayer(chiriinLayer);
+ 
+            L.control.layers({
+              "OpenStreetMap": backgroundLayer,
+              "地理院地図（標準）": chiriinLayer
+            }).addTo(map);
+            // 下のようにも書ける
+            L.marker([34.592331,135.505276]).bindPopup('杉本キャンパス').addTo(map);
+ 
+            // ピン定義
+            const nakamozu_marker = L.marker([34.544865,135.506274]); // ピン＝Markerを初期化
+            nakamozu_marker.bindPopup('なかもずキャンパスC棟'); // ポップアップを紐付け
+            map.addLayer(nakamozu_marker); // ピンを地図上に追加
+ 
+ 
+         
+            
+ 
+            //スケールバー
+            L.control.scale().addTo(map);
+
+            // ローカルPC上のOSRMサーバで杉本キャンパスからなかもずキャンパスまでのルートを検索するURL
+            const url = 'https://routing.openstreetmap.de/routed-car/route/v1/driving/135.505276,34.592331;135.506274,34.544865?geometries=geojson&overview=full'
+
+            async function addRouteLayer(){
+            const response = await fetch(url);
+            const json = await response.json();
+            routeLayer = L.geoJSON(json['routes'][0]['geometry'],{
+                            "color": "#FF00FF",
+                            "weight": 6,
+                            "opacity": 0.65
+                        });                            
+            routeLayer.addTo(map);
+            
+            // 地図をルートに合うように調整
+            const bounds = routeLayer.getBounds();
+            map.fitBounds(bounds); 
+            
+            }
+            // 地図にルートを追加
+            addRouteLayer();
+/*
+            fetch('./N05-24_Station2.geojson') // 全国分の駅データのGeoJSONを非同期読み込み
+            .then((res) => res.json())
+            .then((json) => {
+                // クラスタリングレイヤーを作成し地図に追加
+                const markers = L.markerClusterGroup()
+                    .bindPopup(
+                        (layer) => layer.feature.properties.N05_011, // ポップアップで駅名を表示
+                    )
+                    .addTo(map);
+                L.geoJSON(json).addTo(markers); // クラスタリングレイヤーにGeoJSONデータをセット
+            });
+*/
+
+            // 行政区域レイヤーを作成
+            fetch("./N05-24_Station2.geojson") // 行政区域データを非同期読み込み
+                .then((response) => response.json())
+                .then((data) => {
+                    // 特定の値によりGeoJSONをフィルタリング
+                    var filteredData = data.features.filter(feature => feature.properties.N05_002 === '高野線' ||
+    feature.properties.N05_002 === '南海本線'||
+    feature.properties.N05_002 === '阪和線'||
+    feature.properties.N05_002 === '1号線'||
+    feature.properties.N05_002 === '泉北高速鉄道線'||
+    feature.properties.N05_002 === '阪堺線');
+
+                     var selected_area = L.geoJSON(filteredData)
+                        .bindPopup(layer => {
+                            const p = layer.feature.properties;
+                            return `${p.N05_002}<br>${p.N05_011}`;
+                        });
+                    
+
+                    map.addLayer(selected_area)
+                    // チェックボックス
+                    //LayerControl.addOverlay(selected_area, "行政区域")
+                    // GeoJSONレイヤに地図がフィットするように表示範囲を自動調整
+                    //map.fitBounds(selected_area.getBounds());
+            });            
+
+
+        </script>
+    </body>
+</html>
